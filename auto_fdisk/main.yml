@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+  - name: set auto_fdisk.sh.j2
+    template: src=templates/auto_fdisk.sh.j2 dest='/root/auto_fdisk.sh' mode=0777
+
+  - name: set auto_parted.sh.j2
+    template: src=templates/auto_parted.sh.j2 dest='/root/auto_parted.sh' mode=0777
