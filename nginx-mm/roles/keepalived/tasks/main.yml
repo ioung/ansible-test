@@ -14,5 +14,8 @@
 - name: copy sbin
   shell: creates=/usr/sbin/keepalived cp /usr/local/webserver/keepalived/sbin/keepalived /usr/sbin/
 
+- name: start keepalived
+  shell: /etc/init.d/keepalived start 
+
 - name: add keepalived start on boot
   service: name=keepalived enabled=yes

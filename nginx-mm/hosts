@@ -1,1 +1,2 @@
-192.168.1.134 object_id=404 objtype_id=4 gdzc=GDZC201305760 tag_id=37 hostname=wg-mdb2-1-134.jh.hupu.com ifcfg_ipmi=10.10.1.134 ipmi_mask=255.255.254.0 ipmi_gw=10.10.1.254 ifcfg_vip=192.168.1.144 ifcfg_eth0=192.168.1.134 eth0_mask=255.255.254.0 eth0_gw=192.168.1.254 
+192.168.8.125 object_id=2103 objtype_id=1504 gdzc=null tag_id=15 hostname=zengjun-8-125-tst.hupu.com ifcfg_eth0=192.168.8.125 eth0_mask=255.255.255.0 eth0_gw=192.168.8.254 ifcfg_vip=192.168.9.100 priority_id=100 state_id=MASTER
+192.168.9.89 object_id=2379 objtype_id=1504 gdzc=null tag_id=15 hostname=zengjun-9-89-tst.hupu.com ifcfg_eth0=192.168.9.89 eth0_mask=255.255.255.0 eth0_gw=192.168.9.254 ifcfg_vip=192.168.9.100 priority_id=90 state_id=BACKUP

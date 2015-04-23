@@ -7,10 +7,10 @@ vrrp_script Monitor_Nginx {
  weight 2
 }
 vrrp_instance {{ mm_router_id }} {
-        state MASTER
+        state {{ state_id }}
         interface {{ mm_interface }}
         virtual_router_id {{ mm_id }}
-        priority 100
+        priority {{ priority_id }}
         advert_int 1
         garp_master_delay 1
         nopreempt
