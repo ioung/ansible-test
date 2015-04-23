@@ -1,0 +1,5 @@
+mm_router_id: mdb9100
+mm_interface: eth0
+mm_id: 100
+mm_auth_pass: mdb9100
+mm_vip: 192.168.9.100

@@ -1,0 +1,4 @@
+- shell: mkdir -p /hupu/bin/nginx-mm
+
+- name: generate 'monitor_nginx.sh' file
+  copy: src=monitor_nginx.sh dest='/hupu/bin/nginx-mm/monitor_nginx.sh' backup=yes mode=0700

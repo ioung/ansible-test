@@ -1,0 +1,28 @@
+global_defs {
+        router_id {{ mm_router_id }}
+}
+vrrp_script Monitor_Nginx {
+ script "/hupu/bin/nginx-mm/monitor_nginx.sh"
+ interval 2
+ weight 2
+}
+vrrp_instance {{ mm_router_id }} {
+        state MASTER
+        interface {{ mm_interface }}
+        virtual_router_id {{ mm_id }}
+        priority 100
+        advert_int 1
+        garp_master_delay 1
+        nopreempt
+        authentication {
+            auth_type PASS
+            auth_pass {{ mm_auth_pass }}
+        }
+        track_script {
+        Monitor_Nginx
+    }
+        virtual_ipaddress {
+            {{ mm_vip }}
+        }
+        
+}

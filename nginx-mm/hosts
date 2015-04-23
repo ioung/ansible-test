@@ -1,0 +1,1 @@
+192.168.1.134 object_id=404 objtype_id=4 gdzc=GDZC201305760 tag_id=37 hostname=wg-mdb2-1-134.jh.hupu.com ifcfg_ipmi=10.10.1.134 ipmi_mask=255.255.254.0 ipmi_gw=10.10.1.254 ifcfg_vip=192.168.1.144 ifcfg_eth0=192.168.1.134 eth0_mask=255.255.254.0 eth0_gw=192.168.1.254 
