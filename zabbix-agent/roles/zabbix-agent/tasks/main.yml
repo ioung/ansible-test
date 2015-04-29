@@ -1,0 +1,16 @@
+- include: install.yml tags=install
+
+- name: ensure started
+  service: name=zabbix-agent state=started
+  tags:
+    - start
+
+- name: ensure stopped
+  service: name=zabbix-agent state=stopped
+  tags:
+    - stop
+
+- name: restart zabbix agent
+  service: name=zabbix-agent state=restarted
+  tags:
+    - restart

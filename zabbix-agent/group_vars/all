@@ -1,0 +1,2 @@
+yum_server: mirrors.hupu.com
+Proxy: 192.168.8.188

@@ -1,0 +1,11 @@
+PidFile=/var/run/zabbix/zabbix_agentd.pid
+LogFile=/var/log/zabbix/zabbix_agentd.log
+DebugLevel=3
+Server={{ Proxy }}
+ListenIP={{ inventory_hostname }}
+ServerActive={{ Proxy }}:10050
+Hostname={{ inventory_hostname }}
+Include=/etc/zabbix/zabbix_agentd.d/
+UnsafeUserParameters=1
+EnableRemoteCommands=1
+Timeout=10

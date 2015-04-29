@@ -1,0 +1,24 @@
+- name: copy hupu repo config file
+  get_url: url=http://{{ yum_server }}/pub/file/hupu.repo dest=/etc/yum.repos.d/hupu.repo mode=0640 force=yes
+
+- name: install zabbix rpm
+  yum: name={{ item }} state=latest
+  with_items:
+     - zabbix-agent
+
+- name: path /home/zabbix/scripts
+  file: path=/home/zabbix/scripts owner=zabbix group=zabbix mode=0755 state=directory
+
+- name: Set execute permissions for netstat
+  file: path={{ item }} owner=root group=root mode=6755
+  with_items:
+     - /bin/netstat
+  ignore_errors: True
+
+- name: copy hupu-zabbix config file
+  template: src={{ item }}.j2 dest=/etc/zabbix/{{ item }}
+  with_items:
+     - zabbix_agentd.conf
+
+- name: enable zabbix-agent as service
+  service: name=zabbix-agent state=started enabled=yes
