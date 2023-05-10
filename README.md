@@ -1,2 +1,2 @@
 # ansible-test
-ansible-playboo
+ansible-playbook
