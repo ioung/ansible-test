@@ -3,7 +3,6 @@ ansible for myself
 
 This is writer ansible test
 include myself and good example
-<<<<<<< HEAD
 
 test this by sublime
  
